@@ -1,93 +1,129 @@
 <template>
-  <v-row justify="center" align="center">
-    <v-col cols="12" sm="8" md="6">
-      <div class="text-center">
-        <logo />
-        <vuetify-logo />
-      </div>
-      <v-card>
-        <v-card-title class="headline">
-          Welcome to the Vuetify + Nuxt.js template
-        </v-card-title>
-        <v-card-text>
-          <p>
-            Vuetify is a progressive Material Design component framework for
-            Vue.js. It was designed to empower developers to create amazing
-            applications.
-          </p>
-          <p>
-            For more information on Vuetify, check out the
-            <a
-              href="https://vuetifyjs.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              documentation </a
-            >.
-          </p>
-          <p>
-            If you have questions, please join the official
-            <a
-              href="https://chat.vuetifyjs.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="chat"
-            >
-              discord </a
-            >.
-          </p>
-          <p>
-            Find a bug? Report it on the github
-            <a
-              href="https://github.com/vuetifyjs/vuetify/issues"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="contribute"
-            >
-              issue board </a
-            >.
-          </p>
-          <p>
-            Thank you for developing with Vuetify and I look forward to bringing
-            more exciting features in the future.
-          </p>
-          <div class="text-xs-right">
-            <em><small>&mdash; John Leider</small></em>
-          </div>
-          <hr class="my-3" />
-          <a
-            href="https://nuxtjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Nuxt Documentation
-          </a>
-          <br />
-          <a
-            href="https://github.com/nuxt/nuxt.js"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Nuxt GitHub
-          </a>
-        </v-card-text>
-        <v-card-actions>
-          <v-spacer />
-          <v-btn color="primary" nuxt to="/inspire"> Continue </v-btn>
-        </v-card-actions>
+  <v-list subheader two-line flat class="mx-auto" width="560">
+    <v-title style="font-size: 20px; font-weight: bold"
+      >あなたが好きなアプリを２つ選んでください。</v-title
+    >
+    <v-subheader>editch予選会</v-subheader>
+
+    <v-list-item-group v-model="settings" active-class="pink--text" multiple>
+      <v-card elevation="0" outlined>
+        <v-list-item>
+          <template #default="{ active }">
+            <v-list-item-action>
+              <v-checkbox
+                :input-value="active"
+                color="pink accent-3"
+              ></v-checkbox>
+            </v-list-item-action>
+
+            <v-list-item-content>
+              <v-list-item-title>アプリ1</v-list-item-title>
+              <v-list-item-subtitle>Aさん</v-list-item-subtitle>
+            </v-list-item-content>
+          </template>
+        </v-list-item>
       </v-card>
-    </v-col>
-  </v-row>
+
+      <v-card class="mt-4" elevation="0" outlined>
+        <v-list-item>
+          <template #default="{ active }">
+            <v-list-item-action>
+              <v-checkbox
+                :input-value="active"
+                color="pink accent-3"
+              ></v-checkbox>
+            </v-list-item-action>
+
+            <v-list-item-content>
+              <v-list-item-title>アプリ2</v-list-item-title>
+              <v-list-item-subtitle>Bさん</v-list-item-subtitle>
+            </v-list-item-content>
+          </template>
+        </v-list-item>
+      </v-card>
+
+      <v-card class="mt-4" elevation="0" outlined>
+        <v-list-item>
+          <template #default="{ active }">
+            <v-list-item-action>
+              <v-checkbox
+                :input-value="active"
+                color="pink accent-3"
+              ></v-checkbox>
+            </v-list-item-action>
+
+            <v-list-item-content>
+              <v-list-item-title>アプリ3</v-list-item-title>
+              <v-list-item-subtitle>Cさん</v-list-item-subtitle>
+            </v-list-item-content>
+          </template>
+        </v-list-item>
+      </v-card>
+
+      <v-card class="mt-4" elevation="0" outlined>
+        <v-list-item>
+          <template #default="{ active }">
+            <v-list-item-action>
+              <v-checkbox
+                :input-value="active"
+                color="pink accent-3"
+              ></v-checkbox>
+            </v-list-item-action>
+
+            <v-list-item-content>
+              <v-list-item-title>アプリ4</v-list-item-title>
+              <v-list-item-subtitle>Dさん</v-list-item-subtitle>
+            </v-list-item-content>
+          </template>
+        </v-list-item>
+      </v-card>
+
+      <v-card class="mt-4" elevation="0" outlined>
+        <v-list-item>
+          <template #default="{ active }">
+            <v-list-item-action>
+              <v-checkbox
+                :input-value="active"
+                color="pink accent-3"
+              ></v-checkbox>
+            </v-list-item-action>
+
+            <v-list-item-content>
+              <v-list-item-title>アプリ５</v-list-item-title>
+              <v-list-item-subtitle>Eさん</v-list-item-subtitle>
+            </v-list-item-content>
+          </template>
+        </v-list-item>
+      </v-card>
+    </v-list-item-group>
+    <v-row>
+      <!-- <v-col class="mt-8" style="text-align: center">
+        <v-text-field
+          v-model="message4"
+          label="校長オプション"
+          placeholder="誕生日を入力してください"
+          color="pink accent-3"
+          outlined
+          clearable
+        ></v-text-field>
+      </v-col> -->
+      <v-col class="mt-8" style="text-align: center">
+        <v-btn depressed color="blue-grey lighten-5" x-large>
+          <strong style="color: #f50057">投票する</strong>
+        </v-btn>
+      </v-col>
+    </v-row>
+  </v-list>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
-import VuetifyLogo from '~/components/VuetifyLogo.vue'
+// import Logo from '~/components/Logo.vue'
+// import VuetifyLogo from '~/components/VuetifyLogo.vue'
 
 export default {
-  components: {
-    Logo,
-    VuetifyLogo,
-  },
+  // components: {
+  //   Logo,
+  //   VuetifyLogo,
+  // },
 }
 </script>
