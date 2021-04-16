@@ -1,4 +1,7 @@
+import { firestorePlugin } from 'vuefire'
 import firebase from 'firebase'
+
+Vue.use(firestorePlugin)
 
 // Firebaseの初期化に必要なプロジェクトIDをオブジェクト形式で用意
 const config = {
@@ -9,4 +12,6 @@ const config = {
 if (!firebase.apps.length) {
   firebase.initializeApp(config)
 }
+
 export default firebase
+// export const db = firebase.firestore
